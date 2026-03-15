@@ -160,5 +160,5 @@ a {
 
 @media (max-width: 900px) {
     .main_container { grid-template-columns: 1fr; }
-    card_grid { grid-template-columns: 1fr; }
+    .card_grid { grid-template-columns: 1fr; }
 }
