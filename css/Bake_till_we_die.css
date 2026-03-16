@@ -52,7 +52,7 @@ a {
     margin: 0 auto;
     padding: 24px 20px 30px;
 }
-
+/*เอา image grid ออก*/
 .carousel_wrapper {
     position: relative;
     width: 100%;
@@ -150,7 +150,7 @@ a {
         font-size: 1.2rem;
     }
 }
-
+/*จบตรงนี้*/
 .image_box img {
     width: 100%;
     height: 100%;

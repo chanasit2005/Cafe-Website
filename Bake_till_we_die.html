@@ -9,6 +9,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Bake till we die cafe</title>
+    <script>
+        const track = document.querySelector('.carousel_track');
+        const cards = document.querySelectorAll('.carousel_card');
+        const nextBtn = document.querySelector('.next_btn');
+        const prevBtn = document.querySelector('.prev_btn');
+
+        let counter = 0;
+        const size = 100; // เลื่อนทีละ 100%
+
+        nextBtn.addEventListener('click', () => {
+            if (counter >= cards.length - 1) {
+                counter = 0; // วนกลับไปรูปแรก
+            } else {
+                counter++;
+            }
+            track.style.transform = 'translateX(' + (-size * counter) + '%)';
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (counter <= 0) {
+                counter = cards.length - 1; // วนไปรูปสุดท้าย
+            } else {
+                counter--;
+            }
+            track.style.transform = 'translateX(' + (-size * counter) + '%)';
+        });
+    </script>
 </head>
 <body>
     <header class="navbar">
@@ -22,6 +49,7 @@
     </header>
 
     <section class="main_container">
+        <!--เพื่อนต้องทำเพิ่มในหน้านี้-->
         <div class="carousel_wrapper">
             <div class="carousel_track">
                 <div class="carousel_card">
@@ -38,6 +66,7 @@
             <button class="nav_btn prev_btn"><i class='bx bx-chevron-left'></i></button>
             <button class="nav_btn next_btn"><i class='bx bx-chevron-right'></i></button>
         </div>
+        <!--จบนี้-->
         <div class="shop_info">
             <h1 class="shop_name">BAKE TILL WE DIE</h1>
             <div class="rating_box">
