@@ -9,33 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Bake till we die cafe</title>
-    <script>
-        const track = document.querySelector('.carousel_track');
-        const cards = document.querySelectorAll('.carousel_card');
-        const nextBtn = document.querySelector('.next_btn');
-        const prevBtn = document.querySelector('.prev_btn');
-
-        let counter = 0;
-        const size = 100; // เลื่อนทีละ 100%
-
-        nextBtn.addEventListener('click', () => {
-            if (counter >= cards.length - 1) {
-                counter = 0; // วนกลับไปรูปแรก
-            } else {
-                counter++;
-            }
-            track.style.transform = 'translateX(' + (-size * counter) + '%)';
-        });
-
-        prevBtn.addEventListener('click', () => {
-            if (counter <= 0) {
-                counter = cards.length - 1; // วนไปรูปสุดท้าย
-            } else {
-                counter--;
-            }
-            track.style.transform = 'translateX(' + (-size * counter) + '%)';
-        });
-    </script>
 </head>
 <body>
     <header class="navbar">
@@ -174,5 +147,32 @@
             ข้อมูลอ้างอิงจาก <a href="https://www.tripgether.com" target="_blank" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">tripgether.com</a>
         </p>
     </footer>
+    <script>
+        const track = document.querySelector('.carousel_track');
+        const cards = document.querySelectorAll('.carousel_card');
+        const nextBtn = document.querySelector('.next_btn');
+        const prevBtn = document.querySelector('.prev_btn');
+
+        let counter = 0;
+        const size = 100; // เลื่อนทีละ 100%
+
+        nextBtn.addEventListener('click', () => {
+            if (counter >= cards.length - 1) {
+                counter = 0; // วนกลับไปรูปแรก
+            } else {
+                counter++;
+            }
+            track.style.transform = 'translateX(' + (-size * counter) + '%)';
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (counter <= 0) {
+                counter = cards.length - 1; // วนไปรูปสุดท้าย
+            } else {
+                counter--;
+            }
+            track.style.transform = 'translateX(' + (-size * counter) + '%)';
+        });
+    </script>
 </body>
 </html>
